@@ -1,0 +1,235 @@
+2024-12-05 14:33:06,063 - INFO - Starting server in folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary on port: 8000
+2024-12-05 14:33:35,208 - INFO - Starting server in folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary on port: 8000
+2024-12-05 14:35:31,477 - INFO - Starting server in folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary on port: 8000
+2024-12-05 14:36:21,802 - INFO - Total number of files found: 58
+2024-12-05 14:36:21,803 - INFO - Starting server in folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary on port: 8000
+2024-12-05 14:38:11,765 - DEBUG - Starting to walk through the folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary
+2024-12-05 14:38:11,765 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary
+2024-12-05 14:38:11,767 - DEBUG - Found file: .gitattributes
+2024-12-05 14:38:11,767 - DEBUG - Found file: README.md
+2024-12-05 14:38:11,767 - DEBUG - Found file: server.log
+2024-12-05 14:38:11,767 - DEBUG - Found file: server.py
+2024-12-05 14:38:11,767 - DEBUG - Found file: Start Server.bat
+2024-12-05 14:38:11,768 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git
+2024-12-05 14:38:11,768 - DEBUG - Found file: COMMIT_EDITMSG
+2024-12-05 14:38:11,768 - DEBUG - Found file: config
+2024-12-05 14:38:11,768 - DEBUG - Found file: description
+2024-12-05 14:38:11,768 - DEBUG - Found file: FETCH_HEAD
+2024-12-05 14:38:11,768 - DEBUG - Found file: HEAD
+2024-12-05 14:38:11,769 - DEBUG - Found file: index
+2024-12-05 14:38:11,769 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\hooks
+2024-12-05 14:38:11,769 - DEBUG - Found file: applypatch-msg.sample
+2024-12-05 14:38:11,769 - DEBUG - Found file: commit-msg.sample
+2024-12-05 14:38:11,769 - DEBUG - Found file: fsmonitor-watchman.sample
+2024-12-05 14:38:11,769 - DEBUG - Found file: post-update.sample
+2024-12-05 14:38:11,770 - DEBUG - Found file: pre-applypatch.sample
+2024-12-05 14:38:11,770 - DEBUG - Found file: pre-commit.sample
+2024-12-05 14:38:11,770 - DEBUG - Found file: pre-merge-commit.sample
+2024-12-05 14:38:11,770 - DEBUG - Found file: pre-push.sample
+2024-12-05 14:38:11,770 - DEBUG - Found file: pre-rebase.sample
+2024-12-05 14:38:11,770 - DEBUG - Found file: pre-receive.sample
+2024-12-05 14:38:11,771 - DEBUG - Found file: prepare-commit-msg.sample
+2024-12-05 14:38:11,771 - DEBUG - Found file: push-to-checkout.sample
+2024-12-05 14:38:11,771 - DEBUG - Found file: sendemail-validate.sample
+2024-12-05 14:38:11,771 - DEBUG - Found file: update.sample
+2024-12-05 14:38:11,771 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\info
+2024-12-05 14:38:11,771 - DEBUG - Found file: exclude
+2024-12-05 14:38:11,772 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\logs
+2024-12-05 14:38:11,772 - DEBUG - Found file: HEAD
+2024-12-05 14:38:11,772 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\logs\refs
+2024-12-05 14:38:11,772 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\logs\refs\heads
+2024-12-05 14:38:11,772 - DEBUG - Found file: main
+2024-12-05 14:38:11,773 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\logs\refs\remotes
+2024-12-05 14:38:11,773 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\logs\refs\remotes\origin
+2024-12-05 14:38:11,773 - DEBUG - Found file: HEAD
+2024-12-05 14:38:11,773 - DEBUG - Found file: main
+2024-12-05 14:38:11,774 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects
+2024-12-05 14:38:11,775 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\0d
+2024-12-05 14:38:11,775 - DEBUG - Found file: d75441af9340d0d655b32f76f5a05f667035f1
+2024-12-05 14:38:11,775 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\14
+2024-12-05 14:38:11,775 - DEBUG - Found file: 3f8329e2a6d5cd72bb396e4a986a23484c05bc
+2024-12-05 14:38:11,776 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\1a
+2024-12-05 14:38:11,776 - DEBUG - Found file: aecc982059906d9e5db5a469c6ae5ddcdc852d
+2024-12-05 14:38:11,776 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\29
+2024-12-05 14:38:11,776 - DEBUG - Found file: cff2af55dec5e4ec5b8b3b188116e5bafbd000
+2024-12-05 14:38:11,777 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\32
+2024-12-05 14:38:11,777 - DEBUG - Found file: 5d8392a0e0739d9edb9be0da3caf9bdd86b5ce
+2024-12-05 14:38:11,778 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\3a
+2024-12-05 14:38:11,778 - DEBUG - Found file: e6d16f2ecd854f6f68426dd5f8d1552853865a
+2024-12-05 14:38:11,778 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\42
+2024-12-05 14:38:11,778 - DEBUG - Found file: 5c154a8de44c3aaf20381ba4c101a6883fc2a7
+2024-12-05 14:38:11,779 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\44
+2024-12-05 14:38:11,779 - DEBUG - Found file: b60715557860b473f3d3153fa13530cd2baca7
+2024-12-05 14:38:11,780 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\56
+2024-12-05 14:38:11,780 - DEBUG - Found file: 1cebc14b5c06d9be09ef481836e3247b79dcfd
+2024-12-05 14:38:11,780 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\58
+2024-12-05 14:38:11,780 - DEBUG - Found file: 47d64ac140f2939b62eae3b1309da94fdb944b
+2024-12-05 14:38:11,781 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\5e
+2024-12-05 14:38:11,781 - DEBUG - Found file: 74ec600e1f67b42ece0b03933f4459b53fdeba
+2024-12-05 14:38:11,781 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\60
+2024-12-05 14:38:11,781 - DEBUG - Found file: 66c537380e759d1fe6e04b5206b60cf46be7b1
+2024-12-05 14:38:11,782 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\6d
+2024-12-05 14:38:11,782 - DEBUG - Found file: d74d5c438763903ebfb11b06f3e87acca8947f
+2024-12-05 14:38:11,783 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\73
+2024-12-05 14:38:11,783 - DEBUG - Found file: 080ee94cde036c56f5ba0384e8e3a2613bbf3c
+2024-12-05 14:38:11,783 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\84
+2024-12-05 14:38:11,783 - DEBUG - Found file: defa36800dcfe2dced0ba59d14d8628761a2c9
+2024-12-05 14:38:11,784 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\a8
+2024-12-05 14:38:11,784 - DEBUG - Found file: 9ac4c2560a28179940c7de6a96b0217ed2a6de
+2024-12-05 14:38:11,784 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\b9
+2024-12-05 14:38:11,785 - DEBUG - Found file: 23d460cac703739b8bd62d685037acba592982
+2024-12-05 14:38:11,785 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\ce
+2024-12-05 14:38:11,785 - DEBUG - Found file: 98463dade2dae37d2e50c565db672bc53997fd
+2024-12-05 14:38:11,786 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\df
+2024-12-05 14:38:11,786 - DEBUG - Found file: e0770424b2a19faf507a501ebfc23be8f54e7b
+2024-12-05 14:38:11,786 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\e9
+2024-12-05 14:38:11,786 - DEBUG - Found file: b451aa1354500c071f37f99be330b6217a197b
+2024-12-05 14:38:11,787 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\f8
+2024-12-05 14:38:11,787 - DEBUG - Found file: 58207836bb72c45f69983eee713c948d2d5e30
+2024-12-05 14:38:11,788 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\info
+2024-12-05 14:38:11,788 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\objects\pack
+2024-12-05 14:38:11,788 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\refs
+2024-12-05 14:38:11,788 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\refs\heads
+2024-12-05 14:38:11,788 - DEBUG - Found file: main
+2024-12-05 14:38:11,790 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\refs\remotes
+2024-12-05 14:38:11,790 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\refs\remotes\origin
+2024-12-05 14:38:11,790 - DEBUG - Found file: HEAD
+2024-12-05 14:38:11,791 - DEBUG - Found file: main
+2024-12-05 14:38:11,792 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\.git\refs\tags
+2024-12-05 14:38:11,792 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples
+2024-12-05 14:38:11,792 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples\Phaser
+2024-12-05 14:38:11,792 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples\ThreeJS
+2024-12-05 14:38:11,792 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games
+2024-12-05 14:38:11,792 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games\Phaser
+2024-12-05 14:38:11,792 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games\ThreeJS
+2024-12-05 14:38:11,793 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Info
+2024-12-05 14:38:11,793 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Info\Shaders
+2024-12-05 14:38:11,793 - DEBUG - Found file: Opener.js
+2024-12-05 14:38:11,793 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders
+2024-12-05 14:38:11,793 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders\Phaser
+2024-12-05 14:38:11,793 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders\ThreeJS
+2024-12-05 14:38:11,793 - DEBUG - Found file: CuteCrossShader.js
+2024-12-05 14:38:11,794 - DEBUG - Found file: HypnoticShader.js
+2024-12-05 14:38:11,794 - DEBUG - Found file: StarNest1.js
+2024-12-05 14:38:11,798 - INFO - Total number of files found: 58
+2024-12-05 14:38:11,799 - INFO - Starting server in folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary on port: 8000
+2024-12-05 14:39:22,218 - DEBUG - Starting to walk through the folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary
+2024-12-05 14:39:22,218 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary
+2024-12-05 14:39:22,219 - DEBUG - Found file: .gitattributes
+2024-12-05 14:39:22,219 - DEBUG - Found file: README.md
+2024-12-05 14:39:22,219 - DEBUG - Found file: server.log
+2024-12-05 14:39:22,219 - DEBUG - Found file: server.py
+2024-12-05 14:39:22,219 - DEBUG - Found file: Start Server.bat
+2024-12-05 14:39:22,220 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples
+2024-12-05 14:39:22,220 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples\Phaser
+2024-12-05 14:39:22,220 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples\ThreeJS
+2024-12-05 14:39:22,220 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games
+2024-12-05 14:39:22,220 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games\Phaser
+2024-12-05 14:39:22,220 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games\ThreeJS
+2024-12-05 14:39:22,220 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Info
+2024-12-05 14:39:22,220 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Info\Shaders
+2024-12-05 14:39:22,220 - DEBUG - Found file: Opener.js
+2024-12-05 14:39:22,221 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders
+2024-12-05 14:39:22,221 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders\Phaser
+2024-12-05 14:39:22,221 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders\ThreeJS
+2024-12-05 14:39:22,221 - DEBUG - Found file: CuteCrossShader.js
+2024-12-05 14:39:22,221 - DEBUG - Found file: HypnoticShader.js
+2024-12-05 14:39:22,221 - DEBUG - Found file: StarNest1.js
+2024-12-05 14:39:22,224 - INFO - Total number of files found: 58
+2024-12-05 14:39:22,225 - INFO - Starting server in folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary on port: 8000
+2024-12-05 14:40:56,206 - DEBUG - Starting to walk through the folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary
+2024-12-05 14:40:56,206 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary
+2024-12-05 14:40:56,206 - DEBUG - Found file: .gitattributes
+2024-12-05 14:40:56,206 - DEBUG - Found file: README.md
+2024-12-05 14:40:56,207 - DEBUG - Found file: server.log
+2024-12-05 14:40:56,207 - DEBUG - Found file: server.py
+2024-12-05 14:40:56,207 - DEBUG - Found file: Start Server.bat
+2024-12-05 14:40:56,207 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples
+2024-12-05 14:40:56,207 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples\Phaser
+2024-12-05 14:40:56,208 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples\ThreeJS
+2024-12-05 14:40:56,208 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games
+2024-12-05 14:40:56,208 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games\Phaser
+2024-12-05 14:40:56,208 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games\ThreeJS
+2024-12-05 14:40:56,208 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Info
+2024-12-05 14:40:56,208 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Info\Shaders
+2024-12-05 14:40:56,208 - DEBUG - Found file: Opener.js
+2024-12-05 14:40:56,208 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders
+2024-12-05 14:40:56,209 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders\Phaser
+2024-12-05 14:40:56,209 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders\ThreeJS
+2024-12-05 14:40:56,209 - DEBUG - Found file: CuteCrossShader.js
+2024-12-05 14:40:56,209 - DEBUG - Found file: HypnoticShader.js
+2024-12-05 14:40:56,209 - DEBUG - Found file: StarNest1.js
+2024-12-05 14:40:56,212 - INFO - Total number of files found: 58
+2024-12-05 14:40:56,213 - INFO - Starting server in folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary on port: 8000
+2024-12-05 14:42:30,275 - DEBUG - Starting to walk through the folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary
+2024-12-05 14:42:30,275 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary
+2024-12-05 14:42:30,275 - DEBUG - Found file: .gitattributes
+2024-12-05 14:42:30,275 - DEBUG - Found file: README.md
+2024-12-05 14:42:30,275 - DEBUG - Found file: server.log
+2024-12-05 14:42:30,276 - DEBUG - Found file: server.py
+2024-12-05 14:42:30,276 - DEBUG - Found file: Start Server.bat
+2024-12-05 14:42:30,276 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples
+2024-12-05 14:42:30,276 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples\Phaser
+2024-12-05 14:42:30,276 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples\ThreeJS
+2024-12-05 14:42:30,277 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games
+2024-12-05 14:42:30,277 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games\Phaser
+2024-12-05 14:42:30,277 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games\ThreeJS
+2024-12-05 14:42:30,277 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Info
+2024-12-05 14:42:30,277 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Info\Shaders
+2024-12-05 14:42:30,277 - DEBUG - Found file: Opener.js
+2024-12-05 14:42:30,277 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders
+2024-12-05 14:42:30,277 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders\Phaser
+2024-12-05 14:42:30,278 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders\ThreeJS
+2024-12-05 14:42:30,278 - DEBUG - Found file: CuteCrossShader.js
+2024-12-05 14:42:30,278 - DEBUG - Found file: HypnoticShader.js
+2024-12-05 14:42:30,278 - DEBUG - Found file: StarNest1.js
+2024-12-05 14:42:30,282 - INFO - Total number of files found: 58
+2024-12-05 14:42:30,283 - INFO - Starting server in folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary on port: 8000
+2024-12-05 14:42:53,241 - DEBUG - Starting to walk through the folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary
+2024-12-05 14:42:53,241 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary
+2024-12-05 14:42:53,241 - DEBUG - Found file: .gitattributes
+2024-12-05 14:42:53,241 - DEBUG - Found file: README.md
+2024-12-05 14:42:53,241 - DEBUG - Found file: server.log
+2024-12-05 14:42:53,242 - DEBUG - Found file: server.py
+2024-12-05 14:42:53,242 - DEBUG - Found file: Start Server.bat
+2024-12-05 14:42:53,242 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples
+2024-12-05 14:42:53,242 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples\Phaser
+2024-12-05 14:42:53,242 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples\ThreeJS
+2024-12-05 14:42:53,242 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games
+2024-12-05 14:42:53,243 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games\Phaser
+2024-12-05 14:42:53,243 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games\ThreeJS
+2024-12-05 14:42:53,243 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Info
+2024-12-05 14:42:53,243 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Info\Shaders
+2024-12-05 14:42:53,243 - DEBUG - Found file: Opener.js
+2024-12-05 14:42:53,243 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders
+2024-12-05 14:42:53,243 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders\Phaser
+2024-12-05 14:42:53,243 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders\ThreeJS
+2024-12-05 14:42:53,243 - DEBUG - Found file: CuteCrossShader.js
+2024-12-05 14:42:53,244 - DEBUG - Found file: HypnoticShader.js
+2024-12-05 14:42:53,244 - DEBUG - Found file: StarNest1.js
+2024-12-05 14:42:53,247 - INFO - Total number of files found: 58
+2024-12-05 14:42:53,248 - INFO - Starting server in folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary on port: 8000
+2024-12-05 14:44:00,200 - DEBUG - Starting to walk through the folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary
+2024-12-05 14:44:00,200 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary
+2024-12-05 14:44:00,200 - DEBUG - Found file: .gitattributes
+2024-12-05 14:44:00,200 - DEBUG - Found file: README.md
+2024-12-05 14:44:00,201 - DEBUG - Found file: server.log
+2024-12-05 14:44:00,201 - DEBUG - Found file: server.py
+2024-12-05 14:44:00,201 - DEBUG - Found file: Start Server.bat
+2024-12-05 14:44:00,201 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples
+2024-12-05 14:44:00,201 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples\Phaser
+2024-12-05 14:44:00,202 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Examples\ThreeJS
+2024-12-05 14:44:00,202 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games
+2024-12-05 14:44:00,202 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games\Phaser
+2024-12-05 14:44:00,202 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Games\ThreeJS
+2024-12-05 14:44:00,202 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Info
+2024-12-05 14:44:00,202 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Info\Shaders
+2024-12-05 14:44:00,202 - DEBUG - Found file: Opener.js
+2024-12-05 14:44:00,202 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders
+2024-12-05 14:44:00,203 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders\Phaser
+2024-12-05 14:44:00,203 - DEBUG - Current directory: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary\Shaders\ThreeJS
+2024-12-05 14:44:00,203 - DEBUG - Found file: CuteCrossShader.js
+2024-12-05 14:44:00,203 - DEBUG - Found file: HypnoticShader.js
+2024-12-05 14:44:00,203 - DEBUG - Found file: StarNest1.js
+2024-12-05 14:44:00,203 - INFO - Total number of files shown: 9
+2024-12-05 14:44:00,204 - INFO - Starting server in folder: C:\Users\Hogan\Documents\CodeLibrary\BootsCodeLibrary on port: 8000

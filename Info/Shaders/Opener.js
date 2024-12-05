@@ -16,6 +16,8 @@
 // - 'Fold All/Unfold All' buttons to collapse/expand code.
 // - 'Undo/Redo' buttons to manage your edits (Keypresses also work).
 // - Click 'Launch script' to launch the script in the editor in it's current state.
+// - When you have launched a shader you can press 'E' to edit uniforms that are available 
+//   on the shader.
 
 // Symbol Legend:
 // - Rainbow 🌈 - GLSL Shader executable that can be launched.

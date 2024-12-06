@@ -9,7 +9,9 @@ const sea = {
         iChannel0: {
             value: null
         },
-        _SkySettings: {value: 0},
+        _SkySettngs: {
+            value: 1.0
+        }, // Ocean Category
         uRenderGodrays: {
             value: 1
         },
@@ -40,6 +42,9 @@ const sea = {
         uSunHeight: {
             value: 0.25
         },
+        _OceanSettings: {
+            value: 1.0
+        }, // Ocean Category
         uWaveHeight: {
             value: 0.6 // default SEA_HEIGHT
         },

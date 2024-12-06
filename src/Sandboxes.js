@@ -947,3 +947,280 @@ export class SkyboxShaderSandbox {
         `;
     }
 }
+
+export class ShaderSandbox {
+    constructor() {
+        this.modalContainer = null;
+        this.iframe = null;
+    }
+    loadScript(code) {
+        try {
+            this.createModal();
+            this.createIframeContainer();
+            this.createCloseButton();
+            this.setupHTML(code);
+            this.setupEventListeners();
+        } catch (error) {
+            console.error('❌ Error creating iframe:', error);
+            console.error(error.stack);
+        }
+    }
+    createModal() {
+        this.modalContainer = document.createElement('div');
+        this.modalContainer.style.position = 'fixed';
+        this.modalContainer.style.top = '0';
+        this.modalContainer.style.left = '0';
+        this.modalContainer.style.width = '100%';
+        this.modalContainer.style.height = '100%';
+        this.modalContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+        this.modalContainer.style.zIndex = '9999';
+        this.modalContainer.style.display = 'flex';
+        this.modalContainer.style.justifyContent = 'center';
+        this.modalContainer.style.alignItems = 'center';
+    }
+    createIframeContainer() {
+        const iframeContainer = document.createElement('div');
+        iframeContainer.style.position = 'relative';
+        iframeContainer.style.width = 'calc(100% - 160px)';
+        iframeContainer.style.height = 'calc(100% - 160px)';
+        iframeContainer.style.backgroundColor = '#000';
+        iframeContainer.style.border = `3px solid ${THEME.colors.accent}`;
+        iframeContainer.style.borderRadius = '15px';
+        iframeContainer.style.overflow = 'hidden';
+        this.iframe = document.createElement('iframe');
+        this.iframe.style.width = '100%';
+        this.iframe.style.height = '100%';
+        this.iframe.style.border = 'none';
+        this.iframe.style.backgroundColor = '#000';
+        this.iframe.sandbox = 'allow-scripts allow-same-origin';
+        iframeContainer.appendChild(this.iframe);
+        this.modalContainer.appendChild(iframeContainer);
+        document.body.appendChild(this.modalContainer);
+    }
+    createCloseButton() {
+        const closeButton = document.createElement('button');
+        closeButton.textContent = '×';
+        closeButton.style.position = 'absolute';
+        closeButton.style.right = '10px';
+        closeButton.style.top = '10px';
+        closeButton.style.width = '30px';
+        closeButton.style.height = '30px';
+        closeButton.style.backgroundColor = '#ff4444';
+        closeButton.style.border = 'none';
+        closeButton.style.borderRadius = '50%';
+        closeButton.style.color = '#fff';
+        closeButton.style.fontSize = '20px';
+        closeButton.style.cursor = 'pointer';
+        closeButton.style.zIndex = '10000';
+        closeButton.onclick = () => this.cleanup();
+        const iframeContainer = this.iframe.parentElement;
+        iframeContainer.appendChild(closeButton);
+    }
+    setupHTML(code) {
+        // Find the first constant declaration and replace its name with 'shaderCode'
+        const processedCode = code.replace(/(?:const|let|var)\s+(\w+)\s*=/, 'const shaderCode =');
+        const htmlContent = this.generateHTML(processedCode);
+        const blob = new Blob([htmlContent.trim()], {
+            type: 'text/html;charset=utf-8'
+        });
+        const blobURL = URL.createObjectURL(blob);
+        this.iframe.src = blobURL;
+        this.iframe.onload = () => {
+            URL.revokeObjectURL(blobURL);
+            console.log('✅ Successfully created iframe shader instance');
+        };
+    }
+    setupEventListeners() {
+        // No click listener for modal container - only close via X button
+    }
+    cleanup() {
+        if (this.iframe?.contentWindow) {
+            this.iframe.contentWindow.location.reload();
+        }
+        this.modalContainer?.remove();
+        this.modalContainer = null;
+        this.iframe = null;
+    }
+    generateHTML(code) {
+        return `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <script type="importmap">
+                {
+                    "imports": {
+                        "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.module.js"
+                    }
+                }
+                </script>
+            </head>
+            <body>
+                <canvas id="shaderCanvas"></canvas>
+                <div id="uniformPanel">
+                    <div class="panel-header">Shader Uniforms</div>
+                    <div class="panel-content">
+                        <div style="color: #999; text-align: center; padding: 20px;">
+                            Uniform controls will appear here
+                        </div>
+                    </div>
+                    <div class="key-hint">Press E to toggle panel</div>
+                </div>
+                <script type="module">
+                    import * as THREE from 'three';
+                    ${code}
+                    // Setup scene
+                    const scene = new THREE.Scene();
+                    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 10);
+                    const renderer = new THREE.WebGLRenderer({ 
+                        canvas: document.getElementById('shaderCanvas'),
+                        antialias: true 
+                    });
+                    
+                    // Create a plane with shader material
+                    const geometry = new THREE.PlaneGeometry(2, 2);
+                    let material;
+                    
+                    // Use the unified shaderCode constant
+                    material = new THREE.ShaderMaterial({
+                        ...shaderCode,
+                    });
+                    
+                    const plane = new THREE.Mesh(geometry, material);
+                    scene.add(plane);
+                    
+                    // Position camera
+                    camera.position.z = 1;
+                    
+                    // Setup panel toggle
+                    // Setup panel toggle with proper initialization
+                    const panel = document.getElementById('uniformPanel');
+                    panel.style.right = '-450px'; // Ensure panel starts hidden
+                    
+                    const togglePanel = (event) => {
+                        if (event.key.toLowerCase() === 'e') {
+                            const isVisible = panel.style.right === '0px';
+                            panel.style.right = isVisible ? '-450px' : '0px';
+                            event.preventDefault(); // Prevent any default 'e' key behavior
+                        }
+                    };
+                    
+                    // Add event listener
+                    document.addEventListener('keydown', togglePanel);
+                    
+                    // Clean up on window unload
+                    window.addEventListener('unload', () => {
+                        document.removeEventListener('keydown', togglePanel);
+                    });
+                    
+                    // Mouse tracking
+                    let mousePosition = { x: 0, y: 0 };
+                    document.addEventListener('mousemove', (event) => {
+                        mousePosition.x = event.clientX;
+                        mousePosition.y = event.clientY;
+                    });
+                    
+                    // Animation loop
+                    function animate(time) {
+                        time *= 0.001;  // Convert to seconds
+                        
+                        // Update uniforms based on shader type
+                        if (material.uniforms.iTime) material.uniforms.iTime.value = time;
+                        if (material.uniforms.iMouse) material.uniforms.iMouse.value.set(mousePosition.x, mousePosition.y);
+                        if (material.uniforms.time) material.uniforms.time.value = time;
+                        if (material.uniforms.mouse) material.uniforms.mouse.value.set(mousePosition.x, mousePosition.y);
+                        
+                        requestAnimationFrame(animate);
+                        renderer.render(scene, camera);
+                    }
+                    
+                    // Handle resize
+                    function onWindowResize() {
+                        const width = window.innerWidth;
+                        const height = window.innerHeight;
+                        
+                        renderer.setSize(width, height);
+                        // Update resolution uniform if it exists (different shaders may use different names)
+                        if (material.uniforms.iResolution) material.uniforms.iResolution.value.set(width, height);
+                        if (material.uniforms.resolution) material.uniforms.resolution.value.set(width, height);
+                    }
+                    
+                    window.addEventListener('resize', onWindowResize);
+                    onWindowResize();
+                    animate();
+                </script>
+                <style>
+                    body { 
+                        margin: 0; 
+                        padding: 0;
+                        width: 100vw;
+                        height: 100vh;
+                        background: #000;
+                        overflow: hidden;
+                    }
+                    #shaderCanvas {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                    }
+                    #uniformPanel {
+                        position: fixed;
+                        top: 50%;
+                        right: -450px;
+                        transform: translateY(-50%);
+                        width: 300px;
+                        background-color: #2a2a3a;
+                        border: 2px solid #4a80b4;
+                        border-radius: 8px 0 0 8px;
+                        padding: 20px;
+                        color: #ffffff;
+                        transition: right 0.3s ease-in-out;
+                        z-index: 1000;
+                        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+                        transform: translateY(-50%);
+                        width: 300px;
+                        background-color: #2a2a3a;
+                        border: 2px solid #4a80b4;
+                        border-radius: 8px 0 0 8px;
+                        padding: 20px;
+                        color: #ffffff;
+                        transition: right 0.3s ease-in-out;
+                        z-index: 1000;
+                    }
+                    .panel-header {
+                        font-size: 18px;
+                        font-weight: bold;
+                        margin-bottom: 15px;
+                        padding: 10px;
+                        background-color: #3a3a4a;
+                        border-radius: 4px;
+                        text-align: center;
+                    }
+                    .panel-content {
+                        max-height: calc(100vh - 200px);
+                        overflow-y: auto;
+                        padding-right: 10px;
+                    }
+                    .panel-content::-webkit-scrollbar {
+                        width: 8px;
+                    }
+                    .panel-content::-webkit-scrollbar-track {
+                        background: #2a2a3a;
+                    }
+                    .panel-content::-webkit-scrollbar-thumb {
+                        background: #4a80b4;
+                        border-radius: 4px;
+                    }
+                    .key-hint {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        color: #999;
+                        font-size: 12px;
+                    }
+                </style>
+            </html>
+        `;
+    }
+}

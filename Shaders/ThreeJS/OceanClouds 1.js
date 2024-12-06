@@ -10,8 +10,9 @@ const sea = {
             value: null
         },
         _SkySettngs: {
+			// Sky Category
             value: 1.0
-        }, // Ocean Category
+        }, 
         uRenderGodrays: {
             value: 1
         },
@@ -43,8 +44,9 @@ const sea = {
             value: 0.25
         },
         _OceanSettings: {
+		// Ocean Category
             value: 1.0
-        }, // Ocean Category
+        }, 
         uWaveHeight: {
             value: 0.6 // default SEA_HEIGHT
         },

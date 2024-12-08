@@ -12,14 +12,12 @@ I'm constantly expanding the markdown legend list to make for better and better 
 Content and text blocks preserve the layout of the text within.
 
 Current Legend: 
--- : content block
-== : title
-## : image 
+-- : content block, == : title, ## : image 
 
 Below you'll find an image of the format of this tutoral source file:
 
 <##testImage <-This is my helpful description that appears on hover->##>
-https://play.rosebud.ai/assets/markdown instructions.png?IOSf
+https://play.rosebud.ai/assets/markInfo.png?0x7S
 
 <@@simpleText@@>
 <-16->

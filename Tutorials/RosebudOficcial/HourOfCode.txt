@@ -3,7 +3,7 @@
 https://www.youtube.com/watch?v=qrDrN4B59Qs
 <--Description:-->
 <-16->
-AI Text to Game: Platformer 👉 https://hourofcode.com/rosebudai
+AI Text to Game: Platformer 👉 [url]https://hourofcode.com/rosebudai[/url]
 
 Create a platformer game from scratch, by just describing it. No coding knowledge needed. 
 

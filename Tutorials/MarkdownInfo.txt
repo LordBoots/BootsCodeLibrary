@@ -1,0 +1,35 @@
+<==This is a tutorial on how totutorial==>
+
+<--Markdown file formatting:-->
+<-16->
+The markdown file for tutorials must be formatted in a specific way to work. It's not particularly hard to follow 
+BUT it must be followed without exception.
+
+Typically you will denote sections based on what type of content you want to dispplay in that section. 
+The section will then be automatically parsed and added to the tutotrial viewer based on the block settings. 
+I'm constantly expanding the markdown legend list to make for better and better formats and greater customization.
+
+Content and text blocks preserve the layout of the text within.
+
+Current Legend: 
+-- : content block
+== : title
+## : image 
+
+Below you'll find an image of the format of this tutoral source file:
+
+<##testImage <-This is my helpful description that appears on hover->##>
+https://play.rosebud.ai/assets/markdown instructions.png?IOSf
+
+<@@simpleText@@>
+<-16->
+How about a ShawnBuilds tutorial?!
+V              V                 V
+
+<++MaybeShawnsVid++>
+https://www.youtube.com/watch?v=XpAEraq-uzU
+
+<--ShawnBuils' RoseBud Profile:-->
+
+
+👉 [url]https://play.rosebud.ai/search?query=shawnBuilds[/url]

@@ -3,7 +3,7 @@
 https://www.youtube.com/watch?v=qrDrN4B59Qs
 <--Description:-->
 <-16->
-AI Text to Game: Platformer 👉 https://play.rosebud.ai/games/6def6182-75ab-4867-9d65-3f84070635f2
+AI Text to Game: Platformer 👉 https://hourofcode.com/rosebudai
 
 Create a platformer game from scratch, by just describing it. No coding knowledge needed. 
 

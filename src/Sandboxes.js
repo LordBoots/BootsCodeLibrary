@@ -347,12 +347,11 @@ export class PhaserSandbox {
                         height: 100%;
                         margin: 0;
                         padding: 0;
-                        position: relative;
+                        position: absolute;
                     }
                     canvas {
                         width: 100% !important;
                         height: 100% !important;
-                        object-fit: contain;
                     }
                 </style>
                 <script>

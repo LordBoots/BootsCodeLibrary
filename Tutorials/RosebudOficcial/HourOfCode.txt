@@ -1,0 +1,12 @@
+<==Build a Platformer with AI | Hour Of Code x Rosebud AI 🌹==>
+<++RoseBudVideo++>
+https://www.youtube.com/watch?v=qrDrN4B59Qs
+<--Description:-->
+<-16->
+AI Text to Game: Platformer 👉 https://hourofcode.com/rosebudai
+
+Create a platformer game from scratch, by just describing it. No coding knowledge needed. 
+
+In this lesson we will take you step by step how to ask AI to code your first game. In the end you will have a published game you can share with your friends and family. 
+
+Can be completed in one hour or spread out over a week to create a game with more detail.

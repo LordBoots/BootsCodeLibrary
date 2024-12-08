@@ -1313,15 +1313,9 @@ class Game extends Phaser.Scene {
         // Implement game condition checks here
     }
 }
-const container = document.getElementById('renderDiv');
 // Create a canvas element
-const canvas = document.createElement('canvas');
-canvas.id = 'game-canvas';
-document.getElementById('renderDiv').appendChild(canvas);
 const config = {
     type: Phaser.WEBGL,
-    canvas: canvas,
-    parent: 'renderDiv',
     pixelArt: false,
     scale: {
         mode: Phaser.Scale.FIT,
@@ -1340,6 +1334,5 @@ const config = {
             });
         }
     },
-    canvasStyle: 'width: 100%; height: 100%;'
 };
 window.phaserGame = new Phaser.Game(config);

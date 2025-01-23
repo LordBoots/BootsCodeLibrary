@@ -125,7 +125,7 @@ export class ThreeJSSandbox {
 				</script>
 			</head>
 			<body>
-				<canvas id="threeRenderCanvas"></canvas>
+				<div id="renderDiv"></div>
 				<script type="module">
 					import * as THREE from 'three';
 					window.THREE = THREE;
@@ -179,12 +179,9 @@ export class ThreeJSSandbox {
 							}
 						}
 					});
+
 					const executeScript = async (scriptCode) => {
 						try {
-							scriptCode = scriptCode.replace(/document\.getElementById\(['"]renderDiv['"]\)/g, 
-								'document.getElementById("threeRenderCanvas")');
-							scriptCode = scriptCode.replace(/['"]renderDiv['"]/g, '"threeRenderCanvas"');
-							
 							if (scriptCode.includes('import ')) {
 								await window.executeModuleScript(scriptCode);
 							} else {
@@ -196,6 +193,7 @@ export class ThreeJSSandbox {
 							console.warn('⚠️ Error in script execution:', error);
 						}
 					};
+
 					const maxWaitTime = 2000;
 					const checkInterval = 100;
 					let waitTime = 0;

@@ -100,119 +100,125 @@ export class ThreeJSSandbox {
         this.modalContainer = null;
         this.iframe = null;
     }
-    generateHTML(code) {
-        return `
-            <!DOCTYPE html>
-            <html>
-            <head>
-                <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
-                <script type="importmap">
-                {
-                    "imports": {
-                        "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.module.js",
-                        "three/addons/controls/OrbitControls.js": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/controls/OrbitControls.js",
-                        "three/addons/postprocessing/EffectComposer.js": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/postprocessing/EffectComposer.js",
-                        "three/addons/postprocessing/RenderPass.js": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/postprocessing/RenderPass.js",
-                        "three/addons/postprocessing/UnrealBloomPass.js": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/postprocessing/UnrealBloomPass.js",
-                        "three/addons/postprocessing/SMAAPass.js": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/postprocessing/SMAAPass.js"
-                    }
-                }
-                </script>
-            </head>
-            <body>
-                <canvas id="threeRenderCanvas"></canvas>
-                <script type="module">
-                import * as THREE from 'three';
-                window.THREE = THREE;
-                window.CANNON = CANNON;
-                window.executeModuleScript = async (scriptCode) => {
-                    try {
-                        const blob = new Blob([scriptCode], { type: 'text/javascript' });
-                        const url = URL.createObjectURL(blob);
-                        await import(url);
-                        URL.revokeObjectURL(url);
-                        console.log('✅ Module script executed successfully');
-                    } catch (error) {
-                        console.warn('⚠️ Error in module script execution:', error);
-                    }
-                };
-            </script>
-            <style>
-                body { margin: 0; padding: 0; width: 100vw; height: 100vh; background: #000; overflow: hidden; }
-                #threeRenderCanvas { width: 100%; height: 100%; display: block; }
-            </style>
-            <script>
-                window.sharedStorage = {
-                    localStorage: window.localStorage,
-                    indexedDB: window.indexedDB,
-                    sessionStorage: window.sessionStorage
-                };
-                window.addEventListener('message', (event) => {
-                    if (event.data.type === 'storage-request') {
-                        const { storageType, method, key, value } = event.data;
-                        try {
-                            switch(method) {
-                                case 'getItem':
-                                    const item = window.sharedStorage[storageType].getItem(key);
-                                    event.source.postMessage({
-                                        type: 'storage-response',
-                                        value: item
-                                    }, '*');
-                                    break;
-                                case 'setItem':
-                                    window.sharedStorage[storageType].setItem(key, value);
-                                    break;
-                                case 'removeItem':
-                                    window.sharedStorage[storageType].removeItem(key);
-                                    break;
-                                case 'clear':
-                                    window.sharedStorage[storageType].clear();
-                                    break;
-                            }
-                        } catch (error) {
-                            console.error('Storage operation failed:', error);
-                        }
-                    }
-                });
-                const executeScript = async (scriptCode) => {
-                    try {
-                        scriptCode = scriptCode.replace(/document\.getElementById\(['"]renderDiv['"]\)/g, 
-                            'document.getElementById("threeRenderCanvas")');
-                        scriptCode = scriptCode.replace(/['"]renderDiv['"]/g, '"threeRenderCanvas"');
-                        
-                        if (scriptCode.includes('import ')) {
-                            await window.executeModuleScript(scriptCode);
-                        } else {
-                            const scriptFunction = new Function(scriptCode);
-                            scriptFunction();
-                        }
-                        console.log('✅ Script executed successfully');
-                    } catch (error) {
-                        console.warn('⚠️ Error in script execution:', error);
-                    }
-                };
-                const maxWaitTime = 2000;
-                const checkInterval = 100;
-                let waitTime = 0;
-                const tryExecuteScript = () => {
-                    if (waitTime >= maxWaitTime) {
-                        console.warn('⚠️ Timeout waiting for dependencies - attempting execution anyway');
-                        executeScript(${JSON.stringify(code)});
-                        return;
-                    }
-                    if (document.readyState === 'complete') {
-                        executeScript(${JSON.stringify(code)});
-                    } else {
-                        waitTime += checkInterval;
-                        setTimeout(tryExecuteScript, checkInterval);
-                    }
-                };
-                tryExecuteScript();
-            </script>
-            </html>
-        `;
-    }
+	generateHTML(code) {
+		return `
+			<!DOCTYPE html>
+			<html>
+			<head>
+				<script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+
+				<!-- Import Map -->
+				<script type="importmap">
+				{
+					"imports": {
+						"three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.module.js",
+						"three/addons/controls/OrbitControls.js": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/controls/OrbitControls.js",
+						"three/addons/postprocessing/EffectComposer.js": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/postprocessing/EffectComposer.js",
+						"three/addons/postprocessing/RenderPass.js": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/postprocessing/RenderPass.js",
+						"three/addons/postprocessing/UnrealBloomPass.js": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/postprocessing/UnrealBloomPass.js",
+						"three/addons/postprocessing/SMAAPass.js": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/postprocessing/SMAAPass.js",
+						"three/addons/postprocessing/ShaderPass.js": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/postprocessing/ShaderPass.js",
+						"three/addons/loaders/GLTFLoader.js": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/loaders/GLTFLoader.js"
+					}
+				}
+				</script>
+			</head>
+			<body>
+				<canvas id="threeRenderCanvas"></canvas>
+				<script type="module">
+					import * as THREE from 'three';
+					window.THREE = THREE;
+					window.CANNON = CANNON;
+					window.executeModuleScript = async (scriptCode) => {
+						try {
+							const blob = new Blob([scriptCode], { type: 'text/javascript' });
+							const url = URL.createObjectURL(blob);
+							await import(url);
+							URL.revokeObjectURL(url);
+							console.log('✅ Module script executed successfully');
+						} catch (error) {
+							console.warn('⚠️ Error in module script execution:', error);
+						}
+					};
+				</script>
+				<style>
+					body { margin: 0; padding: 0; width: 100vw; height: 100vh; background: #000; overflow: hidden; }
+					#threeRenderCanvas { width: 100%; height: 100%; display: block; }
+				</style>
+				<script>
+					window.sharedStorage = {
+						localStorage: window.localStorage,
+						indexedDB: window.indexedDB,
+						sessionStorage: window.sessionStorage
+					};
+					window.addEventListener('message', (event) => {
+						if (event.data.type === 'storage-request') {
+							const { storageType, method, key, value } = event.data;
+							try {
+								switch(method) {
+									case 'getItem':
+										const item = window.sharedStorage[storageType].getItem(key);
+										event.source.postMessage({
+											type: 'storage-response',
+											value: item
+										}, '*');
+										break;
+									case 'setItem':
+										window.sharedStorage[storageType].setItem(key, value);
+										break;
+									case 'removeItem':
+										window.sharedStorage[storageType].removeItem(key);
+										break;
+									case 'clear':
+										window.sharedStorage[storageType].clear();
+										break;
+								}
+							} catch (error) {
+								console.error('Storage operation failed:', error);
+							}
+						}
+					});
+					const executeScript = async (scriptCode) => {
+						try {
+							scriptCode = scriptCode.replace(/document\.getElementById\(['"]renderDiv['"]\)/g, 
+								'document.getElementById("threeRenderCanvas")');
+							scriptCode = scriptCode.replace(/['"]renderDiv['"]/g, '"threeRenderCanvas"');
+							
+							if (scriptCode.includes('import ')) {
+								await window.executeModuleScript(scriptCode);
+							} else {
+								const scriptFunction = new Function(scriptCode);
+								scriptFunction();
+							}
+							console.log('✅ Script executed successfully');
+						} catch (error) {
+							console.warn('⚠️ Error in script execution:', error);
+						}
+					};
+					const maxWaitTime = 2000;
+					const checkInterval = 100;
+					let waitTime = 0;
+					const tryExecuteScript = () => {
+						if (waitTime >= maxWaitTime) {
+							console.warn('⚠️ Timeout waiting for dependencies - attempting execution anyway');
+							executeScript(${JSON.stringify(code)});
+							return;
+						}
+						if (document.readyState === 'complete') {
+							executeScript(${JSON.stringify(code)});
+						} else {
+							waitTime += checkInterval;
+							setTimeout(tryExecuteScript, checkInterval);
+						}
+					};
+					tryExecuteScript();
+				</script>
+			</body>
+			</html>
+		`;
+	}
+
 }
 export class PhaserSandbox {
     constructor() {

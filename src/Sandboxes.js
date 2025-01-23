@@ -143,8 +143,26 @@ export class ThreeJSSandbox {
 					};
 				</script>
 				<style>
-					body { margin: 0; padding: 0; width: 100vw; height: 100vh; background: #000; overflow: hidden; }
-					#threeRenderCanvas { width: 100%; height: 100%; display: block; }
+					body {
+						margin: 0;
+						padding: 0;
+						width: 100vw;
+						height: 100vh;
+						background: #000;
+						overflow: hidden;
+					}
+					#renderDiv {
+						width: 100%;
+						height: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+					#threeRenderCanvas {
+						width: 100%;
+						height: 100%;
+						display: block;
+					}
 				</style>
 				<script>
 					window.sharedStorage = {
@@ -216,6 +234,7 @@ export class ThreeJSSandbox {
 			</html>
 		`;
 	}
+
 
 }
 export class PhaserSandbox {
